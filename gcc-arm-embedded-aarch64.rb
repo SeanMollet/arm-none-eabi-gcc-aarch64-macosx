@@ -4,7 +4,7 @@ cask "gcc-arm-embedded" do
   version "10-2021-q1-update"
   sha256 "2debaede0ec7f516cddc70a6694d3dc894068b519e4f03c6fe476e3e70a00131"
 
-  url "https://malmoset.com/casks/gcc-arm-none-eabi-#{version}-mac.tar.bz2"
+  url "https://github.com/SeanMollet/arm-none-eabi-gcc-aarch64-macosx/releases/download/10-2021-q1-update/gcc-arm-none-eabi-{version}-mac-11.2.2.tar.gz"
   name "GCC ARM Embedded"
   homepage "https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"
 
