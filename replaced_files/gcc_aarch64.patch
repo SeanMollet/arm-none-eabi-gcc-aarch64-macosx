@@ -1,0 +1,13 @@
+--- config.host~	2020-06-12 08:57:00.000000000 -0500
++++ config.host	2021-03-28 18:45:29.000000000 -0500
+@@ -93,8 +93,8 @@
+ case ${host} in
+   *-darwin*)
+     # Generic darwin host support.
+-    out_host_hook_obj=host-darwin.o
+-    host_xmake_file="${host_xmake_file} x-darwin"
++#    out_host_hook_obj=host-darwin.o
++#    host_xmake_file="${host_xmake_file} x-darwin"
+     ;;
+ esac
+ 
