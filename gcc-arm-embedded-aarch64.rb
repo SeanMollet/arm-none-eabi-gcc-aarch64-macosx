@@ -1,10 +1,10 @@
-cask "gcc-arm-embedded" do
+cask "gcc-arm-embedded-aarch64" do
   # Exists as a cask because it is impractical as a formula:
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   version "10-2021-q1-update"
   sha256 "17802ac8976f9fab17f4d2918344c942ced5170be15b34b689f5c75b767108a7"
 
-  url "https://github.com/SeanMollet/arm-none-eabi-gcc-aarch64-macosx/releases/download/10-2021-q1-update/gcc-arm-none-eabi-{version}-mac-11.2.2.tar.gz"
+  url "https://github.com/SeanMollet/arm-none-eabi-gcc-aarch64-macosx/releases/download/10-2021-q1-update/gcc-arm-none-eabi-#{version}-mac-11.2.2.tar.gz"
   name "GCC ARM Embedded"
   homepage "https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"
 

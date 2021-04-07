@@ -418,7 +418,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
     ln -s . $INSTALLDIR_NATIVE/arm-none-eabi/usr
 
     rm -rf $BUILDDIR_NATIVE/gcc-final && mkdir -p $BUILDDIR_NATIVE/gcc-final
-    pushd $BUILDDIR_NATIVE/gcc-final
+     pushd $BUILDDIR_NATIVE/gcc-final
 
     $SRCDIR/$GCC/configure --target=$TARGET \
         --prefix=$INSTALLDIR_NATIVE \
@@ -475,7 +475,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
     popd
 
     rm -f $INSTALLDIR_NATIVE/arm-none-eabi/usr
-    popd
+     popd
 
     echo Task [III-5] /$HOST_NATIVE/gcc-size-libstdcxx/ | tee -a "$BUILDDIR_NATIVE/.stage"
     rm -f $BUILDDIR_NATIVE/target-libs/arm-none-eabi/usr
@@ -531,6 +531,9 @@ if [ "x$skip_native_build" != "xyes" ] ; then
         GDB_EXTRA_CONFIG_OPTS=$1
 
         rm -rf $BUILDDIR_NATIVE/gdb && mkdir -p $BUILDDIR_NATIVE/gdb
+        pushd $SRCDIR/$GCC/gdb/
+        patch -p0 --forward <../../gdb_aarch64.patch || true
+        popd
         pushd $BUILDDIR_NATIVE/gdb
         saveenv
         saveenvvar CFLAGS "$ENV_CFLAGS"
