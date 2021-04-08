@@ -531,7 +531,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
         GDB_EXTRA_CONFIG_OPTS=$1
 
         rm -rf $BUILDDIR_NATIVE/gdb && mkdir -p $BUILDDIR_NATIVE/gdb
-        pushd $SRCDIR/$GCC/gdb/
+        pushd $SRCDIR/gdb/gdb/
         patch -p0 --forward <../../gdb_aarch64.patch || true
         popd
         pushd $BUILDDIR_NATIVE/gdb
